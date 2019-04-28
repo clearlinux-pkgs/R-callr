@@ -1,4 +1,5 @@
 # This file contains recursive sources that require this package
+R-brms
 R-devtools
 R-pkgbuild
 R-pkgdown
@@ -6,6 +7,8 @@ R-processx
 R-rcmdcheck
 R-reprex
 R-reticulate
+R-rhub
 R-rstan
 R-rstanarm
+R-shinystan
 R-webshot

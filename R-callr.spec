@@ -4,16 +4,17 @@
 #
 Name     : R-callr
 Version  : 3.2.0
-Release  : 26
+Release  : 27
 URL      : https://cran.r-project.org/src/contrib/callr_3.2.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/callr_3.2.0.tar.gz
 Summary  : Call R from R
 Group    : Development/Tools
 License  : MIT
-Requires: R-assertthat
-Requires: R-processx
+Requires: R-ps
 BuildRequires : R-assertthat
+BuildRequires : R-base64enc
 BuildRequires : R-processx
+BuildRequires : R-ps
 BuildRequires : buildreq-R
 
 %description
@@ -33,10 +34,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552792900
+export SOURCE_DATE_EPOCH=1556467391
 
 %install
-export SOURCE_DATE_EPOCH=1552792900
+export SOURCE_DATE_EPOCH=1556467391
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -72,7 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  callr || :
+R CMD check --no-manual --no-examples --no-codoc callr || :
 
 
 %files
