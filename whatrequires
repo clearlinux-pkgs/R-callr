@@ -1,4 +1,5 @@
 # This file contains recursive sources that require this package
+R-cyclocomp
 R-devtools
 R-pkgbuild
 R-pkgdown
