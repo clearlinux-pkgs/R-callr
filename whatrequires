@@ -1,4 +1,5 @@
 # This file contains recursive sources that require this package
+R-DBItest
 R-cyclocomp
 R-devtools
 R-pkgbuild
@@ -6,6 +7,5 @@ R-pkgdown
 R-processx
 R-rcmdcheck
 R-reprex
-R-reticulate
 R-rhub
 R-webshot
