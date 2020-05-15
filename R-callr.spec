@@ -4,7 +4,7 @@
 #
 Name     : R-callr
 Version  : 3.4.3
-Release  : 42
+Release  : 43
 URL      : https://cran.r-project.org/src/contrib/callr_3.4.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/callr_3.4.3.tar.gz
 Summary  : Call R from R
@@ -17,33 +17,27 @@ BuildRequires : R-processx
 BuildRequires : buildreq-R
 
 %description
-# callr
-> Call R from R
-<!-- badges: start -->
-[![Linux Build Status](https://travis-ci.org/r-lib/callr.svg?branch=master)](https://travis-ci.org/r-lib/callr)
-[![Windows Build status](https://ci.appveyor.com/api/projects/status/github/r-lib/callr?svg=true)](https://ci.appveyor.com/project/gaborcsardi/callr)
-[![](http://www.r-pkg.org/badges/version/callr)](http://www.r-pkg.org/pkg/callr)
-[![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/callr)](http://www.r-pkg.org/pkg/callr)
-[![Coverage Status](https://img.shields.io/codecov/c/github/r-lib/callr/master.svg)](https://codecov.io/github/r-lib/callr?branch=master)
-<!-- badges: end -->
+separate R process, without affecting the current R process at all.
+    This packages does exactly that.
 
 %prep
 %setup -q -c -n callr
+cd %{_builddir}/callr
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1585691365
+export SOURCE_DATE_EPOCH=1589581460
 
 %install
-export SOURCE_DATE_EPOCH=1585691365
+export SOURCE_DATE_EPOCH=1589581460
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
