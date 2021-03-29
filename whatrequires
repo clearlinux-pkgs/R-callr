@@ -9,4 +9,5 @@ R-pkgdown
 R-rcmdcheck
 R-reprex
 R-rhub
+R-testthat
 R-webshot
