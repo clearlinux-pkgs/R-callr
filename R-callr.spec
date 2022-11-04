@@ -4,7 +4,7 @@
 #
 Name     : R-callr
 Version  : 3.7.2
-Release  : 69
+Release  : 70
 URL      : https://cran.r-project.org/src/contrib/callr_3.7.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/callr_3.7.2.tar.gz
 Summary  : Call R from R
@@ -13,7 +13,6 @@ License  : MIT
 Requires: R-R6
 Requires: R-processx
 BuildRequires : R-R6
-BuildRequires : R-mockery
 BuildRequires : R-processx
 BuildRequires : buildreq-R
 
@@ -30,10 +29,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1661187216
+export SOURCE_DATE_EPOCH=1667528524
 
 %install
-export SOURCE_DATE_EPOCH=1661187216
+export SOURCE_DATE_EPOCH=1667528524
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
