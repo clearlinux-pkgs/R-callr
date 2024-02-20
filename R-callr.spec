@@ -6,10 +6,10 @@
 # autospec commit: da8b975
 #
 Name     : R-callr
-Version  : 3.7.4
-Release  : 76
-URL      : https://cran.r-project.org/src/contrib/callr_3.7.4.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/callr_3.7.4.tar.gz
+Version  : 3.7.5
+Release  : 77
+URL      : https://cran.r-project.org/src/contrib/callr_3.7.5.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/callr_3.7.5.tar.gz
 Summary  : Call R from R
 Group    : Development/Tools
 License  : MIT
@@ -37,10 +37,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1708369922
+export SOURCE_DATE_EPOCH=1708444709
 
 %install
-export SOURCE_DATE_EPOCH=1708369922
+export SOURCE_DATE_EPOCH=1708444709
 rm -rf %{buildroot}
 LANG=C.UTF-8
 CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -85,6 +85,7 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 
 %files
 %defattr(-,root,root,-)
+/usr/lib64/R/library/callr/COPYRIGHTS
 /usr/lib64/R/library/callr/DESCRIPTION
 /usr/lib64/R/library/callr/INDEX
 /usr/lib64/R/library/callr/LICENSE
