@@ -7,7 +7,7 @@
 #
 Name     : R-callr
 Version  : 3.7.6
-Release  : 79
+Release  : 80
 URL      : https://cran.r-project.org/src/contrib/callr_3.7.6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/callr_3.7.6.tar.gz
 Summary  : Call R from R
